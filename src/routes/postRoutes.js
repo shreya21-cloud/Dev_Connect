@@ -1,10 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const postController = require('../controllers/postController');
+const {
+    getPostsLists,
+    addNewPost,
+    sendPostById
+} = require('../controllers/postController');
 
 
-router.get("/",postController.getPostsLists);
-router.post("/",postController.addNewPost);
-router.post("/:id",postController.sendPostById);
+router.get("/",getPostsLists);
+router.post("/",addNewPost);
+router.post("/:id",sendPostById);
 
 module.exports = router;
