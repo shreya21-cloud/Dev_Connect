@@ -14,7 +14,7 @@ app.get("/posts",(req, res)=>{
 });
 
 app.post("/posts",(req, res)=>{
-    res.send("ja krdiya post");
+    res.send("ja krdiya post!");
 });
 app.get("/post/:id",(req, res)=>{
     res.send("ye lo yeh waale poora blog");
