@@ -1,13 +1,31 @@
-const getPostsLists = (req, res) => {
-    res.send("ye le saare blogs ki list");
-};
-
-const addNewPost = (req, res) => {
-    res.send("ja krdiya post!");
-};
-
-const sendPostById = (req, res) => {
-    res.send("ye lo yeh waale poora blog");
+const getPostList = (req, res) => {
+  res.send("blog list ");
 }
-
-module.exports = {getPostsLists, addNewPost, sendPostById};
+const addNewPost = (req, res) => {
+  res.send("new blog added" );
+}
+const sendPostById = (req, res) => {
+  const postId = req.params.id;
+  res.send(`blog with id.no  ${postId}` );
+}
+const deletePostById = (req, res) => {
+  const postId = req.params.id;
+  res.send(`deleted blog with ID: ${postId}` );
+}
+const updatePostById = (req, res) => {
+  const postId = req.params.id;
+  res.send("blog updated " );
+}
+const getPostById = (req, res) => {
+  const postId = req.params.id;
+  res.send("this is ur blog");
+}
+const putPostById = (req, res) => {
+  const postId = req.params.id;
+  res.send("ur blog changed ");
+}
+const patchPostById = (req, res) => {
+  const postId = req.params.id;
+  res.send("post updated ");
+}
+module.exports = {getPostList,addNewPost,sendPostById,deletePostById,updatePostById,getPostById,putPostById,patchPostById};
