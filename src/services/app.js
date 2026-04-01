@@ -10,7 +10,5 @@ app.get('/',(req, res )=>{
 res.send('hellooooo');
 });
 
-
-
 app.use('/posts', postRoutes);
 module.exports = app;
